@@ -1,0 +1,163 @@
+Using GATK jar /home/victor/Project/WES/CNA/.snakemake/conda/b2a6627012fb6fbcd38d7140b54a2b38_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /home/victor/Project/WES/CNA/.snakemake/conda/b2a6627012fb6fbcd38d7140b54a2b38_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar CreateReadCountPanelOfNormals --input results/called/P1.N.counts.hdf5 --annotated-intervals results/called/annotated.intervals.tsv --minimum-interval-median-percentile 5.0 --tmp-dir /tmp/tmpo2skjwmb --output results/called/CNV.PoN.hdf5
+09:07:05.745 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/home/victor/Project/WES/CNA/.snakemake/conda/b2a6627012fb6fbcd38d7140b54a2b38_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+09:07:06.939 INFO  CreateReadCountPanelOfNormals - ------------------------------------------------------------
+09:07:06.944 INFO  CreateReadCountPanelOfNormals - The Genome Analysis Toolkit (GATK) v4.4.0.0
+09:07:06.944 INFO  CreateReadCountPanelOfNormals - For support and documentation go to https://software.broadinstitute.org/gatk/
+09:07:06.944 INFO  CreateReadCountPanelOfNormals - Executing as victor@shpc-1385-instance-rVoBySAX on Linux v5.15.0-73-generic amd64
+09:07:06.944 INFO  CreateReadCountPanelOfNormals - Java runtime: OpenJDK 64-Bit Server VM v17.0.3-internal+0-adhoc..src
+09:07:06.944 INFO  CreateReadCountPanelOfNormals - Start Date/Time: June 3, 2023 at 9:07:05 AM CST
+09:07:06.945 INFO  CreateReadCountPanelOfNormals - ------------------------------------------------------------
+09:07:06.945 INFO  CreateReadCountPanelOfNormals - ------------------------------------------------------------
+09:07:06.946 INFO  CreateReadCountPanelOfNormals - HTSJDK Version: 3.0.5
+09:07:06.946 INFO  CreateReadCountPanelOfNormals - Picard Version: 3.0.0
+09:07:06.946 INFO  CreateReadCountPanelOfNormals - Built for Spark Version: 3.3.1
+09:07:06.947 INFO  CreateReadCountPanelOfNormals - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+09:07:06.947 INFO  CreateReadCountPanelOfNormals - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+09:07:06.947 INFO  CreateReadCountPanelOfNormals - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+09:07:06.947 INFO  CreateReadCountPanelOfNormals - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+09:07:06.948 INFO  CreateReadCountPanelOfNormals - Deflater: IntelDeflater
+09:07:06.948 INFO  CreateReadCountPanelOfNormals - Inflater: IntelInflater
+09:07:06.948 INFO  CreateReadCountPanelOfNormals - GCS max retries/reopens: 20
+09:07:06.948 INFO  CreateReadCountPanelOfNormals - Requester pays: disabled
+09:07:06.949 INFO  CreateReadCountPanelOfNormals - Initializing engine
+09:07:06.949 INFO  CreateReadCountPanelOfNormals - Done initializing engine
+09:07:07.360 WARN  Utils - Your hostname, shpc-1385-instance-rVoBySAX resolves to a loopback address: 127.0.1.1; using 172.16.10.110 instead (on interface eth0)
+09:07:07.362 WARN  Utils - Set SPARK_LOCAL_IP if you need to bind to another address
+09:07:07.536 INFO  SparkContext - Running Spark version 3.3.0
+09:07:07.884 WARN  NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+09:07:08.711 INFO  ResourceUtils - ==============================================================
+09:07:08.712 INFO  ResourceUtils - No custom resources configured for spark.driver.
+09:07:08.712 INFO  ResourceUtils - ==============================================================
+09:07:08.713 INFO  SparkContext - Submitted application: CreateReadCountPanelOfNormals
+09:07:09.112 INFO  ResourceProfile - Default ResourceProfile created, executor resources: Map(memoryOverhead -> name: memoryOverhead, amount: 600, script: , vendor: , cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+09:07:09.341 INFO  ResourceProfile - Limiting resource is cpu
+09:07:09.343 INFO  ResourceProfileManager - Added ResourceProfile id: 0
+09:07:10.083 INFO  SecurityManager - Changing view acls to: victor
+09:07:10.084 INFO  SecurityManager - Changing modify acls to: victor
+09:07:10.085 INFO  SecurityManager - Changing view acls groups to: 
+09:07:10.085 INFO  SecurityManager - Changing modify acls groups to: 
+09:07:10.086 INFO  SecurityManager - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(victor); groups with view permissions: Set(); users  with modify permissions: Set(victor); groups with modify permissions: Set()
+09:07:12.838 INFO  Utils - Successfully started service 'sparkDriver' on port 39559.
+09:07:14.094 INFO  SparkEnv - Registering MapOutputTracker
+09:07:14.785 INFO  SparkEnv - Registering BlockManagerMaster
+09:07:15.141 INFO  BlockManagerMasterEndpoint - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+09:07:15.142 INFO  BlockManagerMasterEndpoint - BlockManagerMasterEndpoint up
+09:07:15.174 INFO  SparkEnv - Registering BlockManagerMasterHeartbeat
+09:07:15.967 INFO  DiskBlockManager - Created local directory at /tmp/tmpo2skjwmb/blockmgr-cebd0a9a-379f-4527-bded-4945997f06a7
+09:07:16.551 INFO  MemoryStore - MemoryStore started with capacity 17.8 GiB
+09:07:16.773 INFO  SparkEnv - Registering OutputCommitCoordinator
+09:07:17.677 INFO  log - Logging initialized @15459ms to org.sparkproject.jetty.util.log.Slf4jLog
+09:07:18.516 INFO  Server - jetty-9.4.46.v20220331; built: 2022-03-31T16:38:08.030Z; git: bc17a0369a11ecf40bb92c839b9ef0a8ac50ea18; jvm 17.0.3-internal+0-adhoc..src
+09:07:18.810 INFO  Server - Started @16593ms
+09:07:19.062 INFO  AbstractConnector - Started ServerConnector@7e6d3742{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+09:07:19.062 INFO  Utils - Successfully started service 'SparkUI' on port 4040.
+09:07:19.098 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@61bf405d{/,null,AVAILABLE,@Spark}
+09:07:20.022 INFO  Executor - Starting executor ID driver on host 172.16.10.110
+09:07:20.068 INFO  Executor - Starting executor with user classpath (userClassPathFirst = false): ''
+09:07:20.364 INFO  Utils - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38339.
+09:07:20.364 INFO  NettyBlockTransferService - Server created on 172.16.10.110:38339
+09:07:20.386 INFO  BlockManager - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+09:07:20.477 INFO  BlockManagerMaster - Registering BlockManager BlockManagerId(driver, 172.16.10.110, 38339, None)
+09:07:20.481 INFO  BlockManagerMasterEndpoint - Registering block manager 172.16.10.110:38339 with 17.8 GiB RAM, BlockManagerId(driver, 172.16.10.110, 38339, None)
+09:07:20.487 INFO  BlockManagerMaster - Registered BlockManager BlockManagerId(driver, 172.16.10.110, 38339, None)
+09:07:20.489 INFO  BlockManager - Initialized BlockManager: BlockManagerId(driver, 172.16.10.110, 38339, None)
+09:07:22.704 INFO  ContextHandler - Stopped o.s.j.s.ServletContextHandler@61bf405d{/,null,STOPPED,@Spark}
+09:07:22.707 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@63ad5fe7{/jobs,null,AVAILABLE,@Spark}
+09:07:22.708 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@495bc9e7{/jobs/json,null,AVAILABLE,@Spark}
+09:07:22.709 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@6e7fa4b0{/jobs/job,null,AVAILABLE,@Spark}
+09:07:22.711 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@3e89f5bc{/jobs/job/json,null,AVAILABLE,@Spark}
+09:07:22.712 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@36d39655{/stages,null,AVAILABLE,@Spark}
+09:07:22.713 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@576b385d{/stages/json,null,AVAILABLE,@Spark}
+09:07:22.715 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@27682fa9{/stages/stage,null,AVAILABLE,@Spark}
+09:07:22.716 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@126f2eb8{/stages/stage/json,null,AVAILABLE,@Spark}
+09:07:22.717 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@1f1574c{/stages/pool,null,AVAILABLE,@Spark}
+09:07:22.718 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@7d3815f7{/stages/pool/json,null,AVAILABLE,@Spark}
+09:07:22.720 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@c79780{/storage,null,AVAILABLE,@Spark}
+09:07:22.721 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@64e657b0{/storage/json,null,AVAILABLE,@Spark}
+09:07:22.722 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@6c46dc02{/storage/rdd,null,AVAILABLE,@Spark}
+09:07:22.723 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@b5390{/storage/rdd/json,null,AVAILABLE,@Spark}
+09:07:22.724 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@37f71e8{/environment,null,AVAILABLE,@Spark}
+09:07:22.725 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@397dfbe8{/environment/json,null,AVAILABLE,@Spark}
+09:07:22.731 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@3791af{/executors,null,AVAILABLE,@Spark}
+09:07:22.732 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@308be1a3{/executors/json,null,AVAILABLE,@Spark}
+09:07:22.733 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@e4bb10b{/executors/threadDump,null,AVAILABLE,@Spark}
+09:07:22.734 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@78e50fca{/executors/threadDump/json,null,AVAILABLE,@Spark}
+09:07:23.159 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@76c587ce{/static,null,AVAILABLE,@Spark}
+09:07:23.161 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@45b6c666{/,null,AVAILABLE,@Spark}
+09:07:23.162 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@7fc56d61{/api,null,AVAILABLE,@Spark}
+09:07:23.163 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@126ff1a1{/jobs/job/kill,null,AVAILABLE,@Spark}
+09:07:23.164 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@6ba08a09{/stages/stage/kill,null,AVAILABLE,@Spark}
+09:07:23.177 INFO  ContextHandler - Started o.s.j.s.ServletContextHandler@4c1b4e07{/metrics/json,null,AVAILABLE,@Spark}
+09:07:23.190 INFO  CreateReadCountPanelOfNormals - Spark verbosity set to INFO (see --spark-verbosity argument)
+09:07:23.764 INFO  HDF5Library - Trying to load HDF5 library from:
+	jar:file:/home/victor/Project/WES/CNA/.snakemake/conda/b2a6627012fb6fbcd38d7140b54a2b38_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar!/org/broadinstitute/hdf5/libjhdf5.2.11.0.so
+09:07:24.574 INFO  H5 - HDF5 library: 
+09:07:24.575 INFO  H5 -  successfully loaded.
+09:07:24.576 WARN  CreateReadCountPanelOfNormals - Number of eigensamples (20) is greater than the number of input samples (1); the number of samples retained after filtering will be used instead.
+09:07:24.577 INFO  CreateReadCountPanelOfNormals - Retrieving intervals from first read-counts file (results/called/P1.N.counts.hdf5)...
+09:07:24.780 INFO  CreateReadCountPanelOfNormals - Reading and validating annotated intervals...
+09:07:25.146 INFO  CreateReadCountPanelOfNormals - Validating and aggregating input read-counts files...
+09:07:25.148 INFO  CreateReadCountPanelOfNormals - Aggregating read-counts file results/called/P1.N.counts.hdf5 (1 / 1)
+09:07:25.222 INFO  CreateReadCountPanelOfNormals - Creating the panel of normals...
+09:07:25.226 INFO  HDF5SVDReadCountPanelOfNormals - Creating read-count panel of normals at /home/victor/Project/WES/CNA/results/called/CNV.PoN.hdf5...
+09:07:25.231 INFO  HDF5SVDReadCountPanelOfNormals - Writing version number (7.0)...
+09:07:25.237 INFO  HDF5SVDReadCountPanelOfNormals - Writing command line...
+09:07:25.240 INFO  HDF5SVDReadCountPanelOfNormals - Writing sequence dictionary...
+09:07:25.277 INFO  HDF5SVDReadCountPanelOfNormals - Writing original read counts (5953 x 1)...
+09:07:25.290 INFO  HDF5SVDReadCountPanelOfNormals - Writing original sample filenames (1)...
+09:07:26.130 INFO  HDF5SVDReadCountPanelOfNormals - Writing original intervals (5953)...
+09:07:26.140 INFO  HDF5SVDReadCountPanelOfNormals - Writing GC-content annotations for original intervals (5953)...
+09:07:26.141 INFO  HDF5SVDReadCountPanelOfNormals - Preprocessing and standardizing read counts...
+09:07:26.142 INFO  SVDDenoisingUtils - Preprocessing read counts...
+09:07:26.143 INFO  SVDDenoisingUtils - Transforming read counts to fractional coverage...
+09:07:26.146 INFO  SVDDenoisingUtils - Performing GC-bias correction...
+09:07:26.190 INFO  SVDDenoisingUtils - Filtering intervals with median (across samples) less than or equal to the 5.00 percentile (0.00)...
+09:07:26.196 INFO  SVDDenoisingUtils - After filtering, 3542 out of 5953 intervals remain...
+09:07:26.196 INFO  SVDDenoisingUtils - Dividing by interval medians...
+09:07:26.213 INFO  SVDDenoisingUtils - Filtering samples with a fraction of zero-coverage intervals greater than or equal to 5.00 percent...
+09:07:26.216 INFO  SVDDenoisingUtils - After filtering, 1 out of 1 samples remain...
+09:07:26.216 INFO  SVDDenoisingUtils - Filtering intervals with a fraction of zero-coverage samples greater than or equal to 5.00 percent...
+09:07:26.226 INFO  SVDDenoisingUtils - After filtering, 3542 out of 5953 intervals remain...
+09:07:26.232 INFO  SVDDenoisingUtils - Filtering samples with a median (across intervals) strictly below the 2.50 percentile (1.00) or strictly above the 97.50 percentile (1.00)...
+09:07:26.234 INFO  SVDDenoisingUtils - After filtering, 1 out of 1 samples remain...
+09:07:26.242 INFO  SVDDenoisingUtils - Heap utilization statistics [MB]:
+09:07:26.245 INFO  SVDDenoisingUtils - Used memory: 67
+09:07:26.245 INFO  SVDDenoisingUtils - Free memory: 204
+09:07:26.245 INFO  SVDDenoisingUtils - Total memory: 272
+09:07:26.246 INFO  SVDDenoisingUtils - Maximum memory: 30688
+09:07:26.246 INFO  SVDDenoisingUtils - Performing garbage collection...
+09:07:26.365 INFO  SVDDenoisingUtils - Heap utilization statistics [MB]:
+09:07:26.366 INFO  SVDDenoisingUtils - Used memory: 56
+09:07:26.367 INFO  SVDDenoisingUtils - Free memory: 215
+09:07:26.367 INFO  SVDDenoisingUtils - Total memory: 272
+09:07:26.367 INFO  SVDDenoisingUtils - Maximum memory: 30688
+09:07:26.383 INFO  SVDDenoisingUtils - 0 zero-coverage values were imputed to the median of the non-zero values in the corresponding interval...
+09:07:26.385 INFO  SVDDenoisingUtils - 0 values strictly below the 0.10 percentile (1.00) or strictly above the 99.90 percentile (1.00) were truncated to the corresponding value...
+09:07:26.385 INFO  SVDDenoisingUtils - Panel read counts preprocessed.
+09:07:26.385 INFO  SVDDenoisingUtils - Standardizing read counts...
+09:07:26.385 INFO  SVDDenoisingUtils - Dividing by sample medians and transforming to log2 space...
+09:07:26.388 INFO  SVDDenoisingUtils - Subtracting median of sample medians...
+09:07:26.389 INFO  SVDDenoisingUtils - Panel read counts standardized.
+09:07:26.391 INFO  HDF5SVDReadCountPanelOfNormals - Writing panel sample filenames (1)...
+09:07:26.392 INFO  HDF5SVDReadCountPanelOfNormals - Writing panel intervals (3542)...
+09:07:26.397 INFO  HDF5SVDReadCountPanelOfNormals - Writing panel interval fractional medians (3542)...
+09:07:26.397 WARN  HDF5SVDReadCountPanelOfNormals - 20 eigensamples were requested but only 1 are available in the panel of normals...
+09:07:26.398 INFO  HDF5SVDReadCountPanelOfNormals - Performing SVD (truncated at 1 eigensamples) of standardized counts (transposed to 3542 x 1)...
+09:07:26.398 INFO  HDF5SVDReadCountPanelOfNormals - No eigensamples could be computed because only a single sample was provided or no eigensamples were requested.
+09:07:26.399 INFO  HDF5SVDReadCountPanelOfNormals - Read-count panel of normals written to /home/victor/Project/WES/CNA/results/called/CNV.PoN.hdf5.
+09:07:26.399 INFO  CreateReadCountPanelOfNormals - CreateReadCountPanelOfNormals complete.
+09:07:26.442 INFO  AbstractConnector - Stopped Spark@7e6d3742{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+09:07:26.471 INFO  SparkUI - Stopped Spark web UI at http://172.16.10.110:4040
+09:07:26.583 INFO  MapOutputTrackerMasterEndpoint - MapOutputTrackerMasterEndpoint stopped!
+09:07:26.615 INFO  MemoryStore - MemoryStore cleared
+09:07:26.616 INFO  BlockManager - BlockManager stopped
+09:07:26.636 INFO  BlockManagerMaster - BlockManagerMaster stopped
+09:07:26.641 INFO  OutputCommitCoordinator$OutputCommitCoordinatorEndpoint - OutputCommitCoordinator stopped!
+09:07:26.650 INFO  SparkContext - Successfully stopped SparkContext
+09:07:26.651 INFO  CreateReadCountPanelOfNormals - Shutting down engine
+[June 3, 2023 at 9:07:26 AM CST] org.broadinstitute.hellbender.tools.copynumber.CreateReadCountPanelOfNormals done. Elapsed time: 0.35 minutes.
+Runtime.totalMemory()=285212672
+09:07:26.699 INFO  ShutdownHookManager - Shutdown hook called
+09:07:26.700 INFO  ShutdownHookManager - Deleting directory /tmp/tmpo2skjwmb/spark-92804d78-61bc-44a4-97f6-0c4b05466711

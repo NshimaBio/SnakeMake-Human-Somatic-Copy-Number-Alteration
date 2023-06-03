@@ -1,0 +1,128 @@
+Using GATK jar /home/victor/Project/WES/CNA/.snakemake/conda/b2a6627012fb6fbcd38d7140b54a2b38_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx819M -jar /home/victor/Project/WES/CNA/.snakemake/conda/b2a6627012fb6fbcd38d7140b54a2b38_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar ModelSegments --denoised-copy-ratios results/called/P1.T.denoisedCR.tsv --allelic-counts results/called/P1.T.counts.tsv --output-prefix temp_name__ -O /tmp/tmpvxk3xh89/output_folder --tmp-dir /tmp/tmpvxk3xh89
+09:58:46.854 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/home/victor/Project/WES/CNA/.snakemake/conda/b2a6627012fb6fbcd38d7140b54a2b38_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+09:58:46.909 INFO  ModelSegments - ------------------------------------------------------------
+09:58:46.916 INFO  ModelSegments - The Genome Analysis Toolkit (GATK) v4.4.0.0
+09:58:46.916 INFO  ModelSegments - For support and documentation go to https://software.broadinstitute.org/gatk/
+09:58:46.916 INFO  ModelSegments - Executing as victor@shpc-1385-instance-rVoBySAX on Linux v5.15.0-73-generic amd64
+09:58:46.917 INFO  ModelSegments - Java runtime: OpenJDK 64-Bit Server VM v17.0.3-internal+0-adhoc..src
+09:58:46.917 INFO  ModelSegments - Start Date/Time: June 3, 2023 at 9:58:46 AM CST
+09:58:46.917 INFO  ModelSegments - ------------------------------------------------------------
+09:58:46.930 INFO  ModelSegments - ------------------------------------------------------------
+09:58:46.932 INFO  ModelSegments - HTSJDK Version: 3.0.5
+09:58:46.932 INFO  ModelSegments - Picard Version: 3.0.0
+09:58:46.932 INFO  ModelSegments - Built for Spark Version: 3.3.1
+09:58:46.933 INFO  ModelSegments - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+09:58:46.933 INFO  ModelSegments - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+09:58:46.933 INFO  ModelSegments - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+09:58:46.933 INFO  ModelSegments - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+09:58:46.934 INFO  ModelSegments - Deflater: IntelDeflater
+09:58:46.934 INFO  ModelSegments - Inflater: IntelInflater
+09:58:47.017 INFO  ModelSegments - GCS max retries/reopens: 20
+09:58:47.017 INFO  ModelSegments - Requester pays: disabled
+09:58:47.018 INFO  ModelSegments - Initializing engine
+09:58:47.018 INFO  ModelSegments - Done initializing engine
+09:58:47.024 INFO  ModelSegments - Used memory (MB) after initializing engine: 31
+09:58:47.030 INFO  ModelSegments - Reading file (results/called/P1.T.denoisedCR.tsv)...
+09:58:47.270 INFO  ModelSegments - Reading file (results/called/P1.T.counts.tsv)...
+09:58:53.507 INFO  ModelSegments - Used memory (MB) after reading files: 587
+09:58:53.863 INFO  ModelSegments - Used memory (MB) after validating data: 734
+09:58:54.761 INFO  NaiveHeterozygousPileupGenotypingUtils - Genotyping heterozygous sites from available allelic counts...
+09:58:54.761 INFO  NaiveHeterozygousPileupGenotypingUtils - No matched normal was provided, not running in matched-normal mode...
+09:58:54.761 INFO  NaiveHeterozygousPileupGenotypingUtils - Retained 4084031 / 4084031 sites after filtering allelic counts with total count less than 0 in case sample P1.T...
+09:58:55.720 INFO  NaiveHeterozygousPileupGenotypingUtils - Retained 2539238 / 4084031 sites after filtering on overlap with copy-ratio intervals in case sample P1.T...
+09:59:00.748 INFO  NaiveHeterozygousPileupGenotypingUtils - Retained 614 / 4084031 sites after filtering on heterozygosity in case sample P1.T...
+09:59:00.749 INFO  NaiveHeterozygousPileupGenotypingUtils - Retained 614 / 4084031 sites after applying all filters to case sample P1.T.
+09:59:00.753 INFO  ModelSegments - Used memory (MB) after genotyping: 640
+09:59:00.753 INFO  ModelSegments - Writing heterozygous allelic counts to /tmp/tmpvxk3xh89/output_folder/temp_name__.hets.tsv...
+09:59:00.867 INFO  MultisampleMultidimensionalKernelSegmenter - Using first allelic-count site in each copy-ratio interval (459 / 614) for multidimensional segmentation...
+09:59:00.908 INFO  MultisampleMultidimensionalKernelSegmenter - Finding changepoints in (3542, 614) data points and 3 chromosomes across 1 sample(s)...
+09:59:00.908 INFO  MultisampleMultidimensionalKernelSegmenter - Finding changepoints in 3490 data points in chromosome chr21...
+09:59:01.891 INFO  KernelSegmenter - Found 360 changepoints after applying the changepoint penalty.
+09:59:01.893 INFO  MultisampleMultidimensionalKernelSegmenter - Finding changepoints in 47 data points in chromosome chrX...
+09:59:01.894 WARN  KernelSegmenter - Specified dimension of the kernel approximation (100) exceeds the number of data points (47) to segment; using all data points to calculate kernel matrix.
+09:59:01.990 WARN  KernelSegmenter - Number of points needed to calculate local changepoint costs (2 * window size = 64) exceeds number of data points (47).  Local changepoint costs will not be calculated for this window size.
+09:59:01.990 WARN  KernelSegmenter - Number of points needed to calculate local changepoint costs (2 * window size = 128) exceeds number of data points (47).  Local changepoint costs will not be calculated for this window size.
+09:59:01.990 WARN  KernelSegmenter - Number of points needed to calculate local changepoint costs (2 * window size = 256) exceeds number of data points (47).  Local changepoint costs will not be calculated for this window size.
+09:59:01.990 WARN  KernelSegmenter - Number of points needed to calculate local changepoint costs (2 * window size = 512) exceeds number of data points (47).  Local changepoint costs will not be calculated for this window size.
+09:59:01.991 INFO  KernelSegmenter - Found 2 changepoints after applying the changepoint penalty.
+09:59:01.991 INFO  MultisampleMultidimensionalKernelSegmenter - Finding changepoints in 5 data points in chromosome chrY...
+09:59:01.991 WARN  MultisampleMultidimensionalKernelSegmenter - Number of points in chromosome chrY (5) is less than that required (10), skipping segmentation...
+09:59:01.991 INFO  MultisampleMultidimensionalKernelSegmenter - Found 365 segments in 3 chromosomes across 1 sample(s).
+09:59:01.992 INFO  ModelSegments - Used memory (MB) after segmentation: 536
+09:59:01.993 INFO  ModelSegments - Modeling available denoised copy ratios and heterozygous allelic counts...
+09:59:02.021 INFO  MultidimensionalModeller - Fitting initial model...
+09:59:02.021 INFO  MultidimensionalModeller - Fitting copy-ratio model...
+09:59:02.102 INFO  GibbsSampler - Starting MCMC sampling.
+09:59:02.808 INFO  GibbsSampler - 25 of 100 samples generated.
+09:59:03.228 INFO  GibbsSampler - 50 of 100 samples generated.
+09:59:03.611 INFO  GibbsSampler - 75 of 100 samples generated.
+09:59:03.952 INFO  GibbsSampler - 100 of 100 samples generated.
+09:59:03.952 INFO  GibbsSampler - MCMC sampling complete.
+09:59:03.955 INFO  MultidimensionalModeller - Fitting allele-fraction model...
+09:59:03.982 INFO  AlleleFractionInitializer - Initializing allele-fraction model, iterating until log likelihood converges to within 0.500000...
+09:59:04.071 INFO  AlleleFractionInitializer - Iteration 1, model log likelihood = -17138.847024...
+09:59:04.073 INFO  AlleleFractionInitializer - AlleleFractionGlobalParameters{meanBias=1.094589, biasVariance=0.001722, outlierProbability=0.001358}
+09:59:04.108 INFO  AlleleFractionInitializer - Iteration 2, model log likelihood = -17137.762469...
+09:59:04.108 INFO  AlleleFractionInitializer - AlleleFractionGlobalParameters{meanBias=1.074051, biasVariance=0.001722, outlierProbability=0.001358}
+09:59:04.134 INFO  AlleleFractionInitializer - Iteration 3, model log likelihood = -17137.699675...
+09:59:04.134 INFO  AlleleFractionInitializer - AlleleFractionGlobalParameters{meanBias=1.068734, biasVariance=0.001722, outlierProbability=0.001358}
+09:59:04.150 INFO  GibbsSampler - Starting MCMC sampling.
+09:59:04.872 INFO  GibbsSampler - 25 of 100 samples generated.
+09:59:05.508 INFO  GibbsSampler - 50 of 100 samples generated.
+09:59:06.026 INFO  GibbsSampler - 75 of 100 samples generated.
+09:59:06.571 INFO  GibbsSampler - 100 of 100 samples generated.
+09:59:06.572 INFO  GibbsSampler - MCMC sampling complete.
+09:59:06.610 INFO  ModelSegments - Writing segments to /tmp/tmpvxk3xh89/output_folder/temp_name__.modelBegin.seg...
+09:59:06.660 INFO  MultidimensionalModeller - Writing posterior summaries for copy-ratio global parameters to /tmp/tmpvxk3xh89/output_folder/temp_name__.modelBegin.cr.param...
+09:59:06.662 INFO  MultidimensionalModeller - Writing posterior summaries for allele-fraction global parameters to /tmp/tmpvxk3xh89/output_folder/temp_name__.modelBegin.af.param...
+09:59:06.663 INFO  MultidimensionalModeller - Initial number of segments before smoothing: 365
+09:59:06.663 INFO  MultidimensionalModeller - Smoothing iteration: 1
+09:59:06.665 INFO  MultidimensionalModeller - Number of segments before smoothing iteration: 365
+09:59:06.669 INFO  MultidimensionalModeller - Number of segments after smoothing iteration: 127
+09:59:06.669 INFO  MultidimensionalModeller - Smoothing iteration: 2
+09:59:06.669 INFO  MultidimensionalModeller - Number of segments before smoothing iteration: 127
+09:59:06.670 INFO  MultidimensionalModeller - Number of segments after smoothing iteration: 120
+09:59:06.670 INFO  MultidimensionalModeller - Smoothing iteration: 3
+09:59:06.670 INFO  MultidimensionalModeller - Number of segments before smoothing iteration: 120
+09:59:06.670 INFO  MultidimensionalModeller - Number of segments after smoothing iteration: 119
+09:59:06.671 INFO  MultidimensionalModeller - Smoothing iteration: 4
+09:59:06.671 INFO  MultidimensionalModeller - Number of segments before smoothing iteration: 119
+09:59:06.671 INFO  MultidimensionalModeller - Number of segments after smoothing iteration: 118
+09:59:06.671 INFO  MultidimensionalModeller - Smoothing iteration: 5
+09:59:06.671 INFO  MultidimensionalModeller - Number of segments before smoothing iteration: 118
+09:59:06.672 INFO  MultidimensionalModeller - Number of segments after smoothing iteration: 118
+09:59:06.672 INFO  MultidimensionalModeller - Fitting copy-ratio model...
+09:59:06.681 INFO  GibbsSampler - Starting MCMC sampling.
+09:59:06.902 INFO  GibbsSampler - 25 of 100 samples generated.
+09:59:07.163 INFO  GibbsSampler - 50 of 100 samples generated.
+09:59:07.389 INFO  GibbsSampler - 75 of 100 samples generated.
+09:59:07.623 INFO  GibbsSampler - 100 of 100 samples generated.
+09:59:07.623 INFO  GibbsSampler - MCMC sampling complete.
+09:59:07.623 INFO  MultidimensionalModeller - Fitting allele-fraction model...
+09:59:07.630 INFO  AlleleFractionInitializer - Initializing allele-fraction model, iterating until log likelihood converges to within 0.500000...
+09:59:07.653 INFO  AlleleFractionInitializer - Iteration 1, model log likelihood = -17174.913816...
+09:59:07.653 INFO  AlleleFractionInitializer - AlleleFractionGlobalParameters{meanBias=1.105048, biasVariance=0.001722, outlierProbability=0.001358}
+09:59:07.671 INFO  AlleleFractionInitializer - Iteration 2, model log likelihood = -17173.622658...
+09:59:07.671 INFO  AlleleFractionInitializer - AlleleFractionGlobalParameters{meanBias=1.080875, biasVariance=0.001722, outlierProbability=0.001358}
+09:59:07.689 INFO  AlleleFractionInitializer - Iteration 3, model log likelihood = -17173.604120...
+09:59:07.689 INFO  AlleleFractionInitializer - AlleleFractionGlobalParameters{meanBias=1.077813, biasVariance=0.001722, outlierProbability=0.001358}
+09:59:07.698 INFO  GibbsSampler - Starting MCMC sampling.
+09:59:08.146 INFO  GibbsSampler - 25 of 100 samples generated.
+09:59:08.647 INFO  GibbsSampler - 50 of 100 samples generated.
+09:59:09.168 INFO  GibbsSampler - 75 of 100 samples generated.
+09:59:09.641 INFO  GibbsSampler - 100 of 100 samples generated.
+09:59:09.641 INFO  GibbsSampler - MCMC sampling complete.
+09:59:09.646 INFO  MultidimensionalModeller - Final number of segments after smoothing: 118
+09:59:09.646 INFO  ModelSegments - Writing segments to /tmp/tmpvxk3xh89/output_folder/temp_name__.modelFinal.seg...
+09:59:09.665 INFO  MultidimensionalModeller - Writing posterior summaries for copy-ratio global parameters to /tmp/tmpvxk3xh89/output_folder/temp_name__.modelFinal.cr.param...
+09:59:09.665 INFO  MultidimensionalModeller - Writing posterior summaries for allele-fraction global parameters to /tmp/tmpvxk3xh89/output_folder/temp_name__.modelFinal.af.param...
+09:59:09.666 INFO  ModelSegments - Used memory (MB) after modeling: 488
+09:59:09.675 INFO  ModelSegments - Writing segments to /tmp/tmpvxk3xh89/output_folder/temp_name__.cr.seg...
+09:59:09.690 INFO  ModelSegments - Writing segments to /tmp/tmpvxk3xh89/output_folder/temp_name__.cr.igv.seg...
+09:59:09.692 INFO  ModelSegments - Writing segments to /tmp/tmpvxk3xh89/output_folder/temp_name__.af.igv.seg...
+09:59:09.694 INFO  ModelSegments - ModelSegments complete.
+09:59:09.694 INFO  ModelSegments - Shutting down engine
+[June 3, 2023 at 9:59:09 AM CST] org.broadinstitute.hellbender.tools.copynumber.ModelSegments done. Elapsed time: 0.38 minutes.
+Runtime.totalMemory()=859832320

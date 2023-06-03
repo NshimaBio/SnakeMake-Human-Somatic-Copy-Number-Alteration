@@ -1,0 +1,32 @@
+Using GATK jar /home/victor/Project/WES/CNA/.snakemake/conda/099141900e1f4f29d401fe5ea2a4d5c0_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /home/victor/Project/WES/CNA/.snakemake/conda/099141900e1f4f29d401fe5ea2a4d5c0_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar PlotModeledSegments --allelic-counts results/called/P1.T.hets.tsv --denoised-copy-ratios results/called/P1.T.denoisedCR.tsv --sequence-dictionary /home/victor/DataHub/GATK/Homo_sapiens_assembly38.dict --segments results/called/P1.T.modelFinal.seg --output-prefix P1 --minimum-contig-length 46709983 --output results/called/PlotModeledSegments
+17:38:37.061 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/home/victor/Project/WES/CNA/.snakemake/conda/099141900e1f4f29d401fe5ea2a4d5c0_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+17:38:37.280 INFO  PlotModeledSegments - ------------------------------------------------------------
+17:38:37.315 INFO  PlotModeledSegments - The Genome Analysis Toolkit (GATK) v4.4.0.0
+17:38:37.316 INFO  PlotModeledSegments - For support and documentation go to https://software.broadinstitute.org/gatk/
+17:38:37.316 INFO  PlotModeledSegments - Executing as victor@shpc-1385-instance-rVoBySAX on Linux v5.15.0-73-generic amd64
+17:38:37.316 INFO  PlotModeledSegments - Java runtime: OpenJDK 64-Bit Server VM v17.0.5+8-jvmci-22.3-b08
+17:38:37.317 INFO  PlotModeledSegments - Start Date/Time: June 3, 2023 at 5:38:36 PM CST
+17:38:37.317 INFO  PlotModeledSegments - ------------------------------------------------------------
+17:38:37.317 INFO  PlotModeledSegments - ------------------------------------------------------------
+17:38:37.320 INFO  PlotModeledSegments - HTSJDK Version: 3.0.5
+17:38:37.320 INFO  PlotModeledSegments - Picard Version: 3.0.0
+17:38:37.320 INFO  PlotModeledSegments - Built for Spark Version: 3.3.1
+17:38:37.321 INFO  PlotModeledSegments - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+17:38:37.321 INFO  PlotModeledSegments - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+17:38:37.322 INFO  PlotModeledSegments - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+17:38:37.322 INFO  PlotModeledSegments - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+17:38:37.323 INFO  PlotModeledSegments - Deflater: IntelDeflater
+17:38:37.323 INFO  PlotModeledSegments - Inflater: IntelInflater
+17:38:37.323 INFO  PlotModeledSegments - GCS max retries/reopens: 20
+17:38:37.324 INFO  PlotModeledSegments - Requester pays: disabled
+17:38:37.325 INFO  PlotModeledSegments - Initializing engine
+17:38:37.325 INFO  PlotModeledSegments - Done initializing engine
+17:38:37.326 INFO  PlotModeledSegments - Reading and validating input files...
+17:38:38.993 INFO  PlotModeledSegments - Contigs above length threshold: {chr1=248956422, chr2=242193529, chr3=198295559, chr4=190214555, chr5=181538259, chr6=170805979, chr7=159345973, chr8=145138636, chr9=138394717, chr10=133797422, chr11=135086622, chr12=133275309, chr13=114364328, chr14=107043718, chr15=101991189, chr16=90338345, chr17=83257441, chr18=80373285, chr19=58617616, chr20=64444167, chr21=46709983, chr22=50818468, chrX=156040895, chrY=57227415}
+17:38:39.040 INFO  PlotModeledSegments - Writing plot to /home/victor/Project/WES/CNA/results/called/PlotModeledSegments/P1.modeled.png...
+17:38:40.941 INFO  PlotModeledSegments - PlotModeledSegments complete.
+17:38:40.942 INFO  PlotModeledSegments - Shutting down engine
+[June 3, 2023 at 5:38:40 PM CST] org.broadinstitute.hellbender.tools.copynumber.plotting.PlotModeledSegments done. Elapsed time: 0.07 minutes.
+Runtime.totalMemory()=285212672

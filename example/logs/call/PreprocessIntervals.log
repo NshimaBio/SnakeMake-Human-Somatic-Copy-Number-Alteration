@@ -1,0 +1,39 @@
+Using GATK jar /home/victor/Project/WES/CNA/.snakemake/conda/b2a6627012fb6fbcd38d7140b54a2b38_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /home/victor/Project/WES/CNA/.snakemake/conda/b2a6627012fb6fbcd38d7140b54a2b38_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar PreprocessIntervals --reference /home/victor/DataHub/GATK/Homo_sapiens_assembly38.fasta --bin-length 1000 --padding 250 --interval-merging-rule OVERLAPPING_ONLY --intervals results/called/bed.interval_list --tmp-dir /tmp/tmpdzcsf_vj --output results/called/preprocessed.interval_list
+08:58:18.552 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/home/victor/Project/WES/CNA/.snakemake/conda/b2a6627012fb6fbcd38d7140b54a2b38_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+08:58:18.823 INFO  PreprocessIntervals - ------------------------------------------------------------
+08:58:18.839 INFO  PreprocessIntervals - The Genome Analysis Toolkit (GATK) v4.4.0.0
+08:58:18.840 INFO  PreprocessIntervals - For support and documentation go to https://software.broadinstitute.org/gatk/
+08:58:18.840 INFO  PreprocessIntervals - Executing as victor@shpc-1385-instance-rVoBySAX on Linux v5.15.0-73-generic amd64
+08:58:18.840 INFO  PreprocessIntervals - Java runtime: OpenJDK 64-Bit Server VM v17.0.3-internal+0-adhoc..src
+08:58:18.841 INFO  PreprocessIntervals - Start Date/Time: June 3, 2023 at 8:58:18 AM CST
+08:58:18.841 INFO  PreprocessIntervals - ------------------------------------------------------------
+08:58:18.841 INFO  PreprocessIntervals - ------------------------------------------------------------
+08:58:18.846 INFO  PreprocessIntervals - HTSJDK Version: 3.0.5
+08:58:18.847 INFO  PreprocessIntervals - Picard Version: 3.0.0
+08:58:18.847 INFO  PreprocessIntervals - Built for Spark Version: 3.3.1
+08:58:18.850 INFO  PreprocessIntervals - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+08:58:18.851 INFO  PreprocessIntervals - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+08:58:18.851 INFO  PreprocessIntervals - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+08:58:18.852 INFO  PreprocessIntervals - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+08:58:18.852 INFO  PreprocessIntervals - Deflater: IntelDeflater
+08:58:18.852 INFO  PreprocessIntervals - Inflater: IntelInflater
+08:58:18.855 INFO  PreprocessIntervals - GCS max retries/reopens: 20
+08:58:18.855 INFO  PreprocessIntervals - Requester pays: disabled
+08:58:18.856 INFO  PreprocessIntervals - Initializing engine
+08:58:19.450 INFO  FeatureManager - Using codec IntervalListCodec to read file file:///home/victor/Project/WES/CNA/results/called/bed.interval_list
+08:58:19.819 INFO  IntervalArgumentCollection - Processing 2083360 bp from intervals
+08:58:19.832 INFO  PreprocessIntervals - Done initializing engine
+08:58:19.892 INFO  ProgressMeter - Starting traversal
+08:58:19.893 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Records Processed   Records/Minute
+08:58:19.893 INFO  ProgressMeter -             unmapped              0.0                     0              NaN
+08:58:19.894 INFO  ProgressMeter - Traversal complete. Processed 0 total records in 0.0 minutes.
+08:58:19.894 INFO  PreprocessIntervals - Padding intervals...
+08:58:19.908 INFO  PreprocessIntervals - Generating bins...
+08:58:19.913 INFO  PreprocessIntervals - Filtering bins containing only Ns...
+08:58:22.136 INFO  PreprocessIntervals - Writing bins to /home/victor/Project/WES/CNA/results/called/preprocessed.interval_list...
+08:58:22.182 INFO  PreprocessIntervals - PreprocessIntervals complete.
+08:58:22.182 INFO  PreprocessIntervals - Shutting down engine
+[June 3, 2023 at 8:58:22 AM CST] org.broadinstitute.hellbender.tools.copynumber.PreprocessIntervals done. Elapsed time: 0.06 minutes.
+Runtime.totalMemory()=285212672

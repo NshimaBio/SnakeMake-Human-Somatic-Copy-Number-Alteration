@@ -1,0 +1,21 @@
+include: "rules/common.smk"
+
+##### Target rules #####
+
+rule all:
+    input:
+        "report/fastp_multiqc.html",
+        "report/prepare_multiqc.html",
+        expand("results/called/{s}.T.called.cr.seg",s=samples.Sample),
+        expand("results/called/PlotDenoisedCopyRatios/{s}.deltaMAD.txt",s=samples.Sample),
+        expand("results/called/PlotModeledSegments/{s}.modeled.png",s=samples.Sample)
+
+
+##### Modules #####
+
+# include: "rules/ref.smk"
+include: "rules/trim.smk"
+include: "rules/prepare.smk"
+include: "rules/call.smk"
+include: "rules/qc.smk"
+# include: "rules/annotate.smk"

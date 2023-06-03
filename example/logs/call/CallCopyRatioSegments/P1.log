@@ -1,0 +1,37 @@
+Using GATK jar /home/victor/Project/WES/CNA/.snakemake/conda/9116e72b66383614e9dc71d399632f64_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx819M -jar /home/victor/Project/WES/CNA/.snakemake/conda/9116e72b66383614e9dc71d399632f64_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar CallCopyRatioSegments -I results/called/P1.T.cr.seg -O /tmp/tmps872rvhc/temp.seq --tmp-dir /tmp/tmps872rvhc
+09:59:43.097 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/home/victor/Project/WES/CNA/.snakemake/conda/9116e72b66383614e9dc71d399632f64_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+09:59:43.155 INFO  CallCopyRatioSegments - ------------------------------------------------------------
+09:59:43.159 INFO  CallCopyRatioSegments - The Genome Analysis Toolkit (GATK) v4.4.0.0
+09:59:43.159 INFO  CallCopyRatioSegments - For support and documentation go to https://software.broadinstitute.org/gatk/
+09:59:43.159 INFO  CallCopyRatioSegments - Executing as victor@shpc-1385-instance-rVoBySAX on Linux v5.15.0-73-generic amd64
+09:59:43.159 INFO  CallCopyRatioSegments - Java runtime: OpenJDK 64-Bit Server VM v17.0.3-internal+0-adhoc..src
+09:59:43.160 INFO  CallCopyRatioSegments - Start Date/Time: June 3, 2023 at 9:59:43 AM CST
+09:59:43.160 INFO  CallCopyRatioSegments - ------------------------------------------------------------
+09:59:43.160 INFO  CallCopyRatioSegments - ------------------------------------------------------------
+09:59:43.162 INFO  CallCopyRatioSegments - HTSJDK Version: 3.0.5
+09:59:43.162 INFO  CallCopyRatioSegments - Picard Version: 3.0.0
+09:59:43.162 INFO  CallCopyRatioSegments - Built for Spark Version: 3.3.1
+09:59:43.163 INFO  CallCopyRatioSegments - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+09:59:43.163 INFO  CallCopyRatioSegments - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+09:59:43.164 INFO  CallCopyRatioSegments - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+09:59:43.164 INFO  CallCopyRatioSegments - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+09:59:43.164 INFO  CallCopyRatioSegments - Deflater: IntelDeflater
+09:59:43.165 INFO  CallCopyRatioSegments - Inflater: IntelInflater
+09:59:43.165 INFO  CallCopyRatioSegments - GCS max retries/reopens: 20
+09:59:43.165 INFO  CallCopyRatioSegments - Requester pays: disabled
+09:59:43.166 INFO  CallCopyRatioSegments - Initializing engine
+09:59:43.170 INFO  CallCopyRatioSegments - Done initializing engine
+09:59:43.372 INFO  SimpleCopyRatioCaller - 20 segments in copy-neutral region [0.900000, 1.100000]...
+09:59:43.380 INFO  SimpleCopyRatioCaller - Length-weighted mean of segments in copy-neutral region (CR space): 0.987090
+09:59:43.380 INFO  SimpleCopyRatioCaller - Length-weighted standard deviation for segments in copy-neutral region : 0.045545
+09:59:43.382 INFO  SimpleCopyRatioCaller - 18 / 20 segments in copy-neutral region remain after outliers filtered using z-score threshold (2.000000)...
+09:59:43.382 INFO  SimpleCopyRatioCaller - Length-weighted mean for z-score calling (CR space): 0.983983
+09:59:43.382 INFO  SimpleCopyRatioCaller - Length-weighted standard deviation for z-score calling (CR space): 0.042395
+09:59:43.387 INFO  CallCopyRatioSegments - Writing called segments to /tmp/tmps872rvhc/temp.seq...
+09:59:43.439 INFO  CallCopyRatioSegments - Writing called segments in IGV-compatible format to /tmp/tmps872rvhc/temp.igv.seg...
+09:59:43.449 INFO  CallCopyRatioSegments - CallCopyRatioSegments complete.
+09:59:43.449 INFO  CallCopyRatioSegments - Shutting down engine
+[June 3, 2023 at 9:59:43 AM CST] org.broadinstitute.hellbender.tools.copynumber.CallCopyRatioSegments done. Elapsed time: 0.01 minutes.
+Runtime.totalMemory()=88080384

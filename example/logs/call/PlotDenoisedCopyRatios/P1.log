@@ -1,0 +1,32 @@
+Using GATK jar /home/victor/Project/WES/CNA/.snakemake/conda/099141900e1f4f29d401fe5ea2a4d5c0_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /home/victor/Project/WES/CNA/.snakemake/conda/099141900e1f4f29d401fe5ea2a4d5c0_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar PlotDenoisedCopyRatios --standardized-copy-ratios results/called/P1.T.standardizedCR.tsv --denoised-copy-ratios results/called/P1.T.denoisedCR.tsv --sequence-dictionary /home/victor/DataHub/GATK/Homo_sapiens_assembly38.dict --output-prefix P1 --minimum-contig-length 46709983 --output results/called/PlotDenoisedCopyRatios
+17:48:38.196 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/home/victor/Project/WES/CNA/.snakemake/conda/099141900e1f4f29d401fe5ea2a4d5c0_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+17:48:38.292 INFO  PlotDenoisedCopyRatios - ------------------------------------------------------------
+17:48:38.297 INFO  PlotDenoisedCopyRatios - The Genome Analysis Toolkit (GATK) v4.4.0.0
+17:48:38.298 INFO  PlotDenoisedCopyRatios - For support and documentation go to https://software.broadinstitute.org/gatk/
+17:48:38.298 INFO  PlotDenoisedCopyRatios - Executing as victor@shpc-1385-instance-rVoBySAX on Linux v5.15.0-73-generic amd64
+17:48:38.298 INFO  PlotDenoisedCopyRatios - Java runtime: OpenJDK 64-Bit Server VM v17.0.5+8-jvmci-22.3-b08
+17:48:38.299 INFO  PlotDenoisedCopyRatios - Start Date/Time: June 3, 2023 at 5:48:38 PM CST
+17:48:38.299 INFO  PlotDenoisedCopyRatios - ------------------------------------------------------------
+17:48:38.299 INFO  PlotDenoisedCopyRatios - ------------------------------------------------------------
+17:48:38.303 INFO  PlotDenoisedCopyRatios - HTSJDK Version: 3.0.5
+17:48:38.303 INFO  PlotDenoisedCopyRatios - Picard Version: 3.0.0
+17:48:38.304 INFO  PlotDenoisedCopyRatios - Built for Spark Version: 3.3.1
+17:48:38.320 INFO  PlotDenoisedCopyRatios - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+17:48:38.321 INFO  PlotDenoisedCopyRatios - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+17:48:38.321 INFO  PlotDenoisedCopyRatios - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+17:48:38.322 INFO  PlotDenoisedCopyRatios - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+17:48:38.322 INFO  PlotDenoisedCopyRatios - Deflater: IntelDeflater
+17:48:38.322 INFO  PlotDenoisedCopyRatios - Inflater: IntelInflater
+17:48:38.323 INFO  PlotDenoisedCopyRatios - GCS max retries/reopens: 20
+17:48:38.323 INFO  PlotDenoisedCopyRatios - Requester pays: disabled
+17:48:38.324 INFO  PlotDenoisedCopyRatios - Initializing engine
+17:48:38.324 INFO  PlotDenoisedCopyRatios - Done initializing engine
+17:48:38.325 INFO  PlotDenoisedCopyRatios - Reading and validating input files...
+17:48:39.611 INFO  PlotDenoisedCopyRatios - Contigs above length threshold: {chr1=248956422, chr2=242193529, chr3=198295559, chr4=190214555, chr5=181538259, chr6=170805979, chr7=159345973, chr8=145138636, chr9=138394717, chr10=133797422, chr11=135086622, chr12=133275309, chr13=114364328, chr14=107043718, chr15=101991189, chr16=90338345, chr17=83257441, chr18=80373285, chr19=58617616, chr20=64444167, chr21=46709983, chr22=50818468, chrX=156040895, chrY=57227415}
+17:48:39.641 INFO  PlotDenoisedCopyRatios - Writing plots to /home/victor/Project/WES/CNA/results/called/PlotDenoisedCopyRatios...
+17:48:44.368 INFO  PlotDenoisedCopyRatios - PlotDenoisedCopyRatios complete.
+17:48:44.368 INFO  PlotDenoisedCopyRatios - Shutting down engine
+[June 3, 2023 at 5:48:44 PM CST] org.broadinstitute.hellbender.tools.copynumber.plotting.PlotDenoisedCopyRatios done. Elapsed time: 0.11 minutes.
+Runtime.totalMemory()=285212672

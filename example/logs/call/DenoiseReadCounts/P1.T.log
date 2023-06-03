@@ -1,0 +1,50 @@
+Using GATK jar /home/victor/Project/WES/CNA/.snakemake/conda/9116e72b66383614e9dc71d399632f64_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx819M -jar /home/victor/Project/WES/CNA/.snakemake/conda/9116e72b66383614e9dc71d399632f64_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar DenoiseReadCounts --input results/called/P1.T.counts.hdf5 --count-panel-of-normals results/called/CNV.PoN.hdf5 --annotated-intervals results/called/annotated.intervals.tsv --standardized-copy-ratios results/called/P1.T.standardizedCR.tsv --denoised-copy-ratios results/called/P1.T.denoisedCR.tsv --tmp-dir /tmp/tmpy955l11x
+09:07:31.878 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/home/victor/Project/WES/CNA/.snakemake/conda/9116e72b66383614e9dc71d399632f64_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+09:07:33.010 INFO  DenoiseReadCounts - ------------------------------------------------------------
+09:07:33.014 INFO  DenoiseReadCounts - The Genome Analysis Toolkit (GATK) v4.4.0.0
+09:07:33.014 INFO  DenoiseReadCounts - For support and documentation go to https://software.broadinstitute.org/gatk/
+09:07:33.014 INFO  DenoiseReadCounts - Executing as victor@shpc-1385-instance-rVoBySAX on Linux v5.15.0-73-generic amd64
+09:07:33.014 INFO  DenoiseReadCounts - Java runtime: OpenJDK 64-Bit Server VM v17.0.3-internal+0-adhoc..src
+09:07:33.015 INFO  DenoiseReadCounts - Start Date/Time: June 3, 2023 at 9:07:31 AM CST
+09:07:33.015 INFO  DenoiseReadCounts - ------------------------------------------------------------
+09:07:33.015 INFO  DenoiseReadCounts - ------------------------------------------------------------
+09:07:33.033 INFO  DenoiseReadCounts - HTSJDK Version: 3.0.5
+09:07:33.033 INFO  DenoiseReadCounts - Picard Version: 3.0.0
+09:07:33.034 INFO  DenoiseReadCounts - Built for Spark Version: 3.3.1
+09:07:33.034 INFO  DenoiseReadCounts - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+09:07:33.035 INFO  DenoiseReadCounts - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+09:07:33.035 INFO  DenoiseReadCounts - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+09:07:33.035 INFO  DenoiseReadCounts - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+09:07:33.036 INFO  DenoiseReadCounts - Deflater: IntelDeflater
+09:07:33.036 INFO  DenoiseReadCounts - Inflater: IntelInflater
+09:07:33.036 INFO  DenoiseReadCounts - GCS max retries/reopens: 20
+09:07:33.036 INFO  DenoiseReadCounts - Requester pays: disabled
+09:07:33.037 INFO  DenoiseReadCounts - Initializing engine
+09:07:33.037 INFO  DenoiseReadCounts - Done initializing engine
+09:07:33.047 INFO  HDF5Library - Trying to load HDF5 library from:
+	jar:file:/home/victor/Project/WES/CNA/.snakemake/conda/9116e72b66383614e9dc71d399632f64_/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar!/org/broadinstitute/hdf5/libjhdf5.2.11.0.so
+09:07:34.807 INFO  H5 - HDF5 library: 
+09:07:34.807 INFO  H5 -  successfully loaded.
+09:07:34.809 INFO  DenoiseReadCounts - Reading read-counts file (results/called/P1.T.counts.hdf5)...
+09:07:35.328 WARN  DenoiseReadCounts - Panel of normals was provided; ignoring input GC-content annotations...
+09:07:35.402 INFO  SVDDenoisingUtils - Validating sample intervals against original intervals used to build panel of normals...
+09:07:35.407 INFO  SVDDenoisingUtils - Preprocessing and standardizing sample read counts...
+09:07:35.412 INFO  SVDDenoisingUtils - Preprocessing read counts...
+09:07:35.412 INFO  SVDDenoisingUtils - Transforming read counts to fractional coverage...
+09:07:35.416 INFO  SVDDenoisingUtils - Performing GC-bias correction...
+09:07:35.679 INFO  SVDDenoisingUtils - Subsetting sample intervals to post-filter panel intervals...
+09:07:35.840 INFO  SVDDenoisingUtils - Dividing by interval medians from the panel of normals...
+09:07:35.841 INFO  SVDDenoisingUtils - Sample read counts preprocessed.
+09:07:35.841 INFO  SVDDenoisingUtils - Standardizing read counts...
+09:07:35.841 INFO  SVDDenoisingUtils - Dividing by sample medians and transforming to log2 space...
+09:07:35.845 INFO  SVDDenoisingUtils - Subtracting sample median...
+09:07:35.846 INFO  SVDDenoisingUtils - Sample read counts standardized.
+09:07:35.846 WARN  SVDDenoisingUtils - A zero number of eigensamples was specified or no eigensamples were available to perform denoising; denoised copy ratios will be identical to the standardized copy ratios...
+09:07:35.846 INFO  SVDDenoisingUtils - Sample denoised.
+09:07:35.880 INFO  DenoiseReadCounts - Writing standardized and denoised copy ratios to /home/victor/Project/WES/CNA/results/called/P1.T.standardizedCR.tsv and /home/victor/Project/WES/CNA/results/called/P1.T.denoisedCR.tsv...
+09:07:36.101 INFO  DenoiseReadCounts - DenoiseReadCounts complete.
+09:07:36.101 INFO  DenoiseReadCounts - Shutting down engine
+[June 3, 2023 at 9:07:36 AM CST] org.broadinstitute.hellbender.tools.copynumber.DenoiseReadCounts done. Elapsed time: 0.07 minutes.
+Runtime.totalMemory()=88080384
